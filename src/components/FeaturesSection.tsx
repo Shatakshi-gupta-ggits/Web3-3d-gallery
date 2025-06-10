@@ -57,14 +57,14 @@ export const FeaturesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`group glass-card p-8 hover-lift transition-all duration-500 hover:${feature.bgGlow} animate-fade-up`}
+              className={`group glass-card p-8 hover-3d transition-all duration-500 hover:${feature.bgGlow} animate-fade-up card-3d`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300 group-hover:animate-rotate-3d">
                 {feature.icon}
               </div>
               <h3 className={`text-2xl font-space-grotesk font-semibold mb-4 bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent`}>
@@ -80,3 +80,4 @@ export const FeaturesSection = () => {
     </section>
   );
 };
+

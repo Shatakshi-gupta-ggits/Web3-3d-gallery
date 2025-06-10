@@ -146,9 +146,9 @@
 }
 
 @layer components {
-  /* Professional gradient backgrounds */
+  /* Enhanced gradient backgrounds */
   .bg-primary-gradient {
-    @apply bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-800;
+    @apply bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950;
   }
 
   .bg-card-gradient {
@@ -203,6 +203,16 @@
     @apply transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20;
   }
 
+  /* Enhanced 3D effects */
+  .hover-3d {
+    @apply transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/30;
+    transform-style: preserve-3d;
+  }
+
+  .hover-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.05) translateY(-8px);
+  }
+
   /* Glass morphism effects */
   .glass-card {
     @apply bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-2xl;
@@ -210,6 +220,16 @@
 
   .glass-nav {
     @apply bg-black/30 backdrop-blur-2xl border-b border-white/10;
+  }
+
+  /* 3D floating card effect */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+
+  .card-3d:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.02);
   }
 }
 
@@ -239,6 +259,15 @@
 
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  /* 3D utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
   }
 }
 
@@ -315,3 +344,46 @@
 .animate-enhanced-float {
   animation: enhancedFloat 6s ease-in-out infinite;
 }
+
+/* New 3D rotation animations */
+@keyframes rotate3D {
+  0% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(10deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateX(-5deg) rotateY(5deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+.animate-rotate-3d {
+  animation: rotate3D 12s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-15px) translateX(5px);
+  }
+  50% {
+    transform: translateY(-5px) translateX(-5px);
+  }
+  75% {
+    transform: translateY(-10px) translateX(8px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+

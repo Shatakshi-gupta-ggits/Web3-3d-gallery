@@ -7,7 +7,7 @@ export const HeroSection = () => {
     <section className="section-padding container-padding pt-32 lg:pt-40">
       <div className="max-w-7xl mx-auto text-center">
         <div className="animate-fade-up">
-          <div className="inline-flex items-center px-4 py-2 mb-8 bg-white/5 border border-white/10 rounded-full backdrop-blur-lg">
+          <div className="inline-flex items-center px-4 py-2 mb-8 bg-white/5 border border-white/10 rounded-full backdrop-blur-lg hover-3d">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-sm font-medium text-slate-300">Now in Beta • Join the Future</span>
           </div>
@@ -30,24 +30,24 @@ export const HeroSection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <Button size="lg" className="btn-primary px-8 py-4 text-lg font-semibold rounded-xl">
+          <Button size="lg" className="btn-primary px-8 py-4 text-lg font-semibold rounded-xl hover-3d">
             Launch dApp
           </Button>
-          <Button variant="outline" size="lg" className="btn-secondary px-8 py-4 text-lg font-semibold rounded-xl">
+          <Button variant="outline" size="lg" className="btn-secondary px-8 py-4 text-lg font-semibold rounded-xl hover-3d">
             View Demo
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          <div className="glass-card p-8 hover-lift hover-glow">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 animate-fade-up perspective-1000" style={{ animationDelay: '0.4s' }}>
+          <div className="glass-card p-8 hover-3d card-3d">
             <div className="text-4xl font-bold text-primary-gradient mb-3">10K+</div>
             <div className="text-slate-300 font-medium">Verified Credentials</div>
           </div>
-          <div className="glass-card p-8 hover-lift hover-glow">
+          <div className="glass-card p-8 hover-3d card-3d">
             <div className="text-4xl font-bold text-accent-gradient mb-3">50+</div>
             <div className="text-slate-300 font-medium">Partner DAOs</div>
           </div>
-          <div className="glass-card p-8 hover-lift hover-glow">
+          <div className="glass-card p-8 hover-3d card-3d">
             <div className="text-4xl font-bold text-primary-gradient mb-3">95%</div>
             <div className="text-slate-300 font-medium">Match Accuracy</div>
           </div>
@@ -60,3 +60,4 @@ export const HeroSection = () => {
     </section>
   );
 };
+
