@@ -3,51 +3,57 @@ export const FeaturesSection = () => {
   const features = [
     {
       title: "AI Copilot",
-      description: "Real-time upskilling recommendations powered by GPT-4o",
+      description: "Real-time upskilling recommendations powered by GPT-4o for personalized learning paths",
       icon: "🤖",
-      gradient: "from-cyan-400 to-blue-500"
+      gradient: "from-cyan-400 to-blue-500",
+      bgGlow: "shadow-cyan-500/20"
     },
     {
       title: "ZK-Proof Verification",
-      description: "Private credential verification without revealing sensitive data",
+      description: "Private credential verification without revealing sensitive data using zero-knowledge proofs",
       icon: "🔒",
-      gradient: "from-purple-400 to-pink-500"
+      gradient: "from-purple-400 to-pink-500",
+      bgGlow: "shadow-purple-500/20"
     },
     {
       title: "Cross-DAO Reputation",
-      description: "Portable reputation system across decentralized communities",
+      description: "Portable reputation system that travels with you across decentralized communities",
       icon: "🌐",
-      gradient: "from-green-400 to-cyan-500"
+      gradient: "from-green-400 to-cyan-500",
+      bgGlow: "shadow-green-500/20"
     },
     {
       title: "Skill DNA Profiling",
-      description: "Interactive visualization of your complete skill ecosystem",
+      description: "Interactive visualization of your complete skill ecosystem with AI-driven insights",
       icon: "🧬",
-      gradient: "from-orange-400 to-red-500"
+      gradient: "from-orange-400 to-red-500",
+      bgGlow: "shadow-orange-500/20"
     },
     {
       title: "DAO-to-DAO Bridges",
-      description: "Seamless talent discovery across Web3 organizations",
+      description: "Seamless talent discovery and collaboration across Web3 organizations and protocols",
       icon: "🌉",
-      gradient: "from-indigo-400 to-purple-500"
+      gradient: "from-indigo-400 to-purple-500",
+      bgGlow: "shadow-indigo-500/20"
     },
     {
       title: "Gasless Onboarding",
-      description: "Zero-friction entry for new users with Biconomy integration",
+      description: "Zero-friction entry for new users with Biconomy integration and smart account abstraction",
       icon: "⚡",
-      gradient: "from-yellow-400 to-orange-500"
+      gradient: "from-yellow-400 to-orange-500",
+      bgGlow: "shadow-yellow-500/20"
     }
   ];
 
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="features" className="section-padding container-padding">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-space-grotesk font-bold mb-6 text-primary-gradient text-balance">
             Revolutionary Features
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Cutting-edge technology meets seamless user experience
+          <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed text-pretty">
+            Cutting-edge technology meets seamless user experience in the future of professional networking
           </p>
         </div>
 
@@ -55,13 +61,16 @@ export const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:bg-white/10"
+              className={`group glass-card p-8 hover-lift transition-all duration-500 hover:${feature.bgGlow} animate-fade-up`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className={`text-xl font-semibold mb-3 bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent`}>
+              <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                {feature.icon}
+              </div>
+              <h3 className={`text-2xl font-space-grotesk font-semibold mb-4 bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent`}>
                 {feature.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-slate-300 leading-relaxed text-pretty">
                 {feature.description}
               </p>
             </div>

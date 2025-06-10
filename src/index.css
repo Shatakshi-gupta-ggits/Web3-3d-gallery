@@ -1,8 +1,12 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Import Inter font for professional typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Enhanced design system with professional colors and gradients */
 
 @layer base {
   :root {
@@ -34,23 +38,27 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Professional Web3 color palette */
+    --primary-blue: 214 100% 60%;
+    --primary-purple: 261 83% 58%;
+    --primary-cyan: 189 94% 65%;
+    --accent-pink: 325 74% 63%;
+    --accent-orange: 31 81% 56%;
+    --neutral-dark: 217 33% 17%;
+    --neutral-light: 220 14% 96%;
+    --success-green: 142 76% 36%;
+    --warning-yellow: 45 93% 47%;
   }
 
   .dark {
@@ -98,6 +106,212 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
   }
+
+  /* Enhanced typography scale */
+  h1 {
+    @apply font-space-grotesk font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply font-space-grotesk font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply font-space-grotesk font-medium;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900/20;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-cyan-500 to-purple-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply from-cyan-400 to-purple-400;
+  }
+}
+
+@layer components {
+  /* Professional gradient backgrounds */
+  .bg-primary-gradient {
+    @apply bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-800;
+  }
+
+  .bg-card-gradient {
+    @apply bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl;
+  }
+
+  .bg-feature-gradient {
+    @apply bg-gradient-to-br from-white/[0.12] to-white/[0.06] backdrop-blur-lg;
+  }
+
+  /* Enhanced text gradients */
+  .text-primary-gradient {
+    @apply bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .text-accent-gradient {
+    @apply bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+
+  /* Professional button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02];
+  }
+
+  .btn-secondary {
+    @apply border border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-lg text-white font-medium transition-all duration-300 hover:border-white/30;
+  }
+
+  /* Professional animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20;
+  }
+
+  /* Glass morphism effects */
+  .glass-card {
+    @apply bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  .glass-nav {
+    @apply bg-black/30 backdrop-blur-2xl border-b border-white/10;
+  }
+}
+
+@layer utilities {
+  /* Custom font families */
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  /* Professional spacing utilities */
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Typography utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Enhanced keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Professional pulse animation */
+@keyframes professionalPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-professional-pulse {
+  animation: professionalPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Enhanced floating animation */
+@keyframes enhancedFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+.animate-enhanced-float {
+  animation: enhancedFloat 6s ease-in-out infinite;
 }
