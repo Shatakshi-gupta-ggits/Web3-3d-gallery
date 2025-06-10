@@ -2,6 +2,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { CredentialGallery } from "@/components/CredentialGallery";
+import { ProductGallery } from "@/components/ProductGallery";
 import { RoleDashboards } from "@/components/RoleDashboards";
 import { CTASection } from "@/components/CTASection";
 import { Navigation } from "@/components/Navigation";
@@ -14,6 +15,7 @@ const Index = () => {
       <main className="relative">
         <HeroSection />
         <CredentialGallery />
+        <ProductGallery />
         <FeaturesSection />
         <RoleDashboards />
         <CTASection />
@@ -35,4 +37,3 @@ const Index = () => {
 };
 
 export default Index;
-
