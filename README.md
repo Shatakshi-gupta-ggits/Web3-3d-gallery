@@ -1,73 +1,35 @@
-# Welcome to your Lovable project
+# SkillLink 3D Gallery
 
-## Project info
+SkillLink 3D Gallery is a platform for showcasing verified skills and connecting talent in the Web3 ecosystem. Explore interactive 3D galleries, display your credentials, and discover opportunities in decentralized communities.
 
-**URL**: https://lovable.dev/projects/f0760a84-1268-478e-8269-227c1db49cc7
+## Features
 
-## How can I edit this code?
+- Interactive 3D gallery for skill portfolios  
+- Web3 credential verification  
+- Connect and collaborate with other users  
+- Modern, responsive design
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/skillink-3d-gallery.git
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f0760a84-1268-478e-8269-227c1db49cc7) and start prompting.
+## Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
+- `src/` — Main application source code  
+- `public/` — Static assets  
+- `index.html` — Main HTML entry point
 
-**Use your preferred IDE**
+## License
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f0760a84-1268-478e-8269-227c1db49cc7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is licensed under the MIT
